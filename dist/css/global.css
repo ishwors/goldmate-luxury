@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 100;
+  src: url("../../assets/fonts/CabinetGrotesk-Thin.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 200;
+  src: url("../../assets/fonts/CabinetGrotesk-ExtraLight.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 300;
+  src: url("../../assets/fonts/CabinetGrotesk-Light.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/CabinetGrotesk-Regular.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 500;
+  src: url("../../assets/fonts/CabinetGrotesk-Medium.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 600;
+  src: url("../../assets/fonts/CabinetGrotesk-Variable.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../../assets/fonts/CabinetGrotesk-Bold.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 800;
+  src: url("../../assets/fonts/CabinetGrotesk-Extrabold.woff") format("truetype");
+}
+@font-face {
+  font-family: "CabinetGrotesk";
+  font-display: swap;
+  font-weight: 900;
+  src: url("../../assets/fonts/CabinetGrotesk-Black.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 200;
+  src: url("../../assets/fonts/Satoshi-Light.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../../assets/fonts/Satoshi-Regular.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 500;
+  src: url("../../assets/fonts/Satoshi-Medium.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 600;
+  src: url("../../assets/fonts/Satoshi-Variable.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../../assets/fonts/Satoshi-Bold.woff") format("truetype");
+}
+@font-face {
+  font-family: "Satoshi";
+  font-display: swap;
+  font-weight: 900;
+  src: url("../../assets/fonts/Satoshi-Black.woff") format("truetype");
+}/*# sourceMappingURL=global.css.map */

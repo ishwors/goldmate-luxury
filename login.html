@@ -1,11 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Goldmate Watch</title>
+  <link rel="stylesheet" href="dist/css/styles.css" />
 </head>
+
 <body>
-  
+  <section class="login__wrapper container-fluid">
+    <div class="row">
+      <div class="col-lg-7 col-md- p-0">
+        <div class="login-banner" style="background-image: url('./assets/images/login-banner.jpg')"></div>
+      </div>
+      <!-- ****** -->
+      <div class="col-lg-5 col-md-12 p-0">
+        <div class="login-card__wrapper d-flex align-items-center">
+          <div class="login-card m-auto w-100">
+            <div class="logo__wrapper">
+              <img class="logo" src="./assets/svg/Logo.svg" alt="Goldmate Logo" />
+            </div>
+
+            <div class="detail">
+              <h1 class="detail__title">Log in to your Account</h1>
+              <p class="detail__subtitle">
+                Welcome back ! Select method to login
+              </p>
+            </div>
+
+            <div class="login-alter d-flex justify-content-center">
+              <a class="sso-link" href="#">
+                <img src="./assets/svg/google.svg" alt="Google" title="Login with Google" />
+              </a>
+              <a class="sso-link" href="#">
+                <img src="./assets/svg/Facebook.svg" alt="Facebook" title="Login with Facebook" />
+              </a>
+              <a class="sso-link" href="#">
+                <img src="./assets/svg/apple.svg" alt="Apple" title="Login with Apple id" />
+              </a>
+            </div>
+
+            <p class="text-center">or continue with email</p>
+
+            <div class="form-floating__wrapper">
+              <div class="form-floating mb-4 position-relative">
+                <input type="email" class="form-control password" id="floatingInput" placeholder="name@example.com" />
+                <label for="floatingInput">Email</label>
+                <!-- <span class="error-message position-absolute text-white">Incorrect Email</span> -->
+              </div>
+
+              <div class="form-floating position-relative">
+                <input id="txtPassword" type="password" class="form-control" id="floatingPassword"
+                  placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+                <div id="btnToggle" class="eye-btn-wrapper">
+                  <i id="eyeIcon" class="far fa-eye-slash icon right"></i>
+                </div>
+                <!-- <span class="error-message position-absolute text-white">Incorrect Password</span> -->
+              </div>
+            </div>
+
+            <div class="form-extras d-flex flex-wrap align-items-center justify-content-between">
+              <div class="form-check d-inline">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                <label class="form-check-label" for="flexCheckDefault">
+                  Default checkbox
+                </label>
+              </div>
+              <a class="forget-password__link" target="_blank" href="#">Forget password?</a>
+            </div>
+
+            <button type="button" class="login-btn btn btn-warning w-100 rounded-5 btn-lg">
+              Login
+            </button>
+
+            <p class="register-link__wrapper text-center">
+              Don’t have an account?
+              <a class="register-link" href="#" target="_blank">Register</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    let passwordInput = document.getElementById("txtPassword"),
+      toggle = document.getElementById("btnToggle"),
+      icon = document.getElementById("eyeIcon");
+
+    function togglePassword() {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      } else {
+        passwordInput.type = "password";
+        icon.classList.add("fa-eye-slash");
+      }
+    }
+    toggle.addEventListener("click", togglePassword, false);
+    passwordInput.addEventListener("keyup", checkInput, false);
+  </script>
 </body>
+
 </html>

@@ -1,15 +1,16 @@
 @import "./global.scss";
 
 * {
-  font-family: Satoshi, sans-serif !important;
+  font-family: Satoshi, sans-serif;
   font-weight: 400;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: CabinetGrotesk, sans-serif !important;
+  font-family: CabinetGrotesk, sans-serif;
   font-weight: 400;
 }
 
@@ -17,5 +18,215 @@ h5 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none !important;
 }
+
+a {
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+// Login Page CSS -- Starts
+.login-banner {
+  background-color: #121212;
+  height: 100dvh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-card {
+  max-width: 532px;
+
+  &__wrapper {
+    background: #121212;
+    height: 100dvh;
+    padding: 0 20px;
+
+    & h1,
+    p,
+    span,
+    label,
+    a {
+      color: white;
+    }
+
+    & .logo {
+      max-width: 140px;
+
+      &__wrapper {
+        margin-bottom: 40px;
+      }
+    }
+
+    & .detail {
+      margin-bottom: 40px;
+
+      &__title {
+        font-size: 32px;
+        line-height: normal;
+        font-weight: 700;
+      }
+
+      &__subtitle {
+        font-size: 16px;
+        line-height: normal;
+        font-weight: 400;
+        color: #dddddddb;
+      }
+    }
+
+    & .login-alter {
+      margin-bottom: 40px;
+      gap: 20px;
+
+      & a {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 500%;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        padding: 3px;
+      }
+    }
+
+    & .form-floating {
+      margin-bottom: 16px;
+
+      & label {
+        color: rgba(221, 221, 221, 0.87);
+      }
+
+      & input {
+        border-radius: 8px;
+        background: rgba(145, 158, 171, 0.08);
+        border: none;
+        color: #ffffff;
+
+        &:focus {
+          background: rgba(145, 158, 171, 0.08);
+          color: #ffffff;
+
+          &+label {
+            color: rgba(221, 221, 221, 0.87);
+          }
+        }
+      }
+
+      &__wrapper {
+        margin-top: 40px;
+
+        & .error-message {
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+
+      & .icon {
+        padding: 20px 4px;
+        color: #d9d9d9;
+        min-width: 34px;
+        text-align: center;
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+        border: none;
+        z-index: 99;
+        top: 0;
+        height: 100%;
+        width: 42px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .form-extras {
+      padding-left: 12px;
+      margin-bottom: 24px;
+
+      & input[type="checkbox"] {
+        background-color: transparent;
+        border: 2px solid #919eab;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      & .forget-password__link {
+        // color: #ffffff;
+      }
+    }
+
+    & .login-btn {
+      margin-bottom: 40px;
+      padding: 16px;
+      font-weight: 600;
+    }
+
+    & .register-link {
+      &__wrapper {}
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-banner {
+    display: none;
+  }
+
+  .login-card {   
+    &__wrapper {
+      & .logo {
+        max-width: 100px;
+        &__wrapper {
+          margin-bottom: 28px;
+        }
+      }
+      & .detail {
+        margin-bottom: 28px;
+
+        &__title {
+          font-size: 26px;
+        }
+
+        &__subtitle {
+          font-size: 14px;
+        }
+      }
+
+      & .login-alter {
+        margin-bottom: 28px;
+        gap: 16px;       
+      }
+
+      & .form-floating {
+        margin-bottom: 14px;
+        &__wrapper {
+          margin-top: 28px;
+          & .error-message {
+            font-size: 12px;
+          }
+        }
+      }
+
+      & .form-extras {
+        padding-left: 12px;
+        margin-bottom: 18px;
+      }
+
+      & .login-btn {
+        margin-bottom: 28px;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+// Login Page CSS -- Ends

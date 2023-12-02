@@ -33,13 +33,13 @@
   font-family: "CabinetGrotesk";
   font-display: swap;
   font-weight: 600;
-  src: url("../../assets/fonts/CabinetGrotesk-Variable.woff") format("truetype");
+  src: url("../../assets/fonts/CabinetGrotesk-Bold.woff") format("truetype");
 }
 @font-face {
   font-family: "CabinetGrotesk";
   font-display: swap;
   font-weight: 700;
-  src: url("../../assets/fonts/CabinetGrotesk-Bold.woff") format("truetype");
+  src: url("../../assets/fonts/CabinetGrotesk-Variable.woff") format("truetype");
 }
 @font-face {
   font-family: "CabinetGrotesk";

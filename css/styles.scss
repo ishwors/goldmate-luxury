@@ -7,9 +7,7 @@
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+h3 {
   font-family: CabinetGrotesk, sans-serif;
   font-weight: 400;
 }
@@ -23,13 +21,47 @@ h5 {
 
 a {
   transition: all 0.2s linear;
+  color: #121212;
 
   &:hover {
+    color: #121212;
     opacity: 0.8;
   }
 }
 
+// Bootstrap v5.2.3 Overriding
+.form-check-input {
+  &:focus {
+    border-color: #121212;
+    box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
+  }
 
+  &:checked {
+    background-color: #121212;
+    border-color: #121212;
+  }
+
+  &[type="checkbox"] {
+    border-radius: 2px;
+    border: 1.5px solid var(--gray-600, #4a5568);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.btn.btn-warning {
+  background: #FEE13D;
+}
+
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
 // Login Page CSS -- Starts
 .login-banner {
   background-color: #121212;
@@ -40,7 +72,7 @@ a {
 }
 
 .login-card {
-  max-width: 532px;
+  max-width: 480px;
 
   &__wrapper {
     background: #121212;
@@ -69,7 +101,7 @@ a {
       &__title {
         font-size: 32px;
         line-height: normal;
-        font-weight: 700;
+        font-weight: 600;
       }
 
       &__subtitle {
@@ -110,6 +142,7 @@ a {
         &:focus {
           background: rgba(145, 158, 171, 0.08);
           color: #ffffff;
+          box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
 
           &+label {
             color: rgba(221, 221, 221, 0.87);
@@ -181,14 +214,16 @@ a {
     display: none;
   }
 
-  .login-card {   
+  .login-card {
     &__wrapper {
       & .logo {
         max-width: 100px;
+
         &__wrapper {
           margin-bottom: 28px;
         }
       }
+
       & .detail {
         margin-bottom: 28px;
 
@@ -203,13 +238,15 @@ a {
 
       & .login-alter {
         margin-bottom: 28px;
-        gap: 16px;       
+        gap: 16px;
       }
 
       & .form-floating {
         margin-bottom: 14px;
+
         &__wrapper {
           margin-top: 28px;
+
           & .error-message {
             font-size: 12px;
           }
@@ -230,3 +267,496 @@ a {
 }
 
 // Login Page CSS -- Ends
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+// Header / Nav CSS -- Starts
+.site-header {
+  &.scroll {
+    height: 80px;
+  }
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 104px;
+  background-color: #121212;
+
+  .site-navigation {
+    &__header-link {
+      padding: 20px;
+      color: white;
+      opacity: 0.8;
+      transition: all 0.4s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        font-weight: 700;
+        opacity: 1;
+      }
+    }
+  }
+
+  .mobile-nav__btn {
+    display: none;
+  }
+
+  .login-btn {
+    .btn {
+      color: #121212;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 16px 48px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .site-header {
+    height: 80px;
+
+    .site-navigation {
+      display: none;
+    }
+
+    .login-btn .btn {
+      font-size: 16px;
+      padding: 12px 36px;
+    }
+
+    .mobile-nav {
+      &__btn {
+        display: block;
+
+        &.btn {
+          padding: 0;
+
+          &:active {
+            border-color: transparent;
+          }
+
+        }
+      }
+
+      &__drawer {
+        max-width: 334px;
+
+        .site-navigation {
+          display: block;
+
+          & ul>li {
+            margin-bottom: 20px;
+          }
+
+          &__header-link {
+            color: #121212;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+
+
+
+    }
+  }
+}
+
+// Header / Nav CSS -- Ends
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+
+// Product Listing Page -- Starts
+.product-list-hero {
+  // margin-top: 104px;
+  padding-top: 120px;
+
+  &_background {
+    background: #121212;
+  }
+
+  &__content {
+    padding-top: 30px;
+
+    &-title {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: normal;
+      color: #ffffff;
+    }
+
+    &-subtitle {
+      color: rgba(221, 221, 221, 0.87);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.product-list-anav {
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+
+    &__wrapper {
+      padding-block: 20px;
+      margin-inline: 20px;
+      border-bottom: 1px solid #dedede;
+    }
+  }
+
+  position: sticky !important;
+  top: 0;
+  padding-bottom: 20px;
+
+  .filter__accordions {
+    max-height: calc(100dvh - 192px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      background: #e0e0e0;
+      transition: all 0.5s ease-out;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #121212aa;
+    }
+
+    &.accordion {
+      $accordion-icon-active-color: balck !important;
+    }
+
+    & ul>li label {
+      font-size: 16px;
+    }
+
+    & .form-check-label {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    & .accordion-item {
+      & .accordion-button {
+        color: $primary-black;
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      border: none;
+
+      &:first-of-type {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    & .accordion {
+      &-button {
+        padding-block: 20px;
+
+        &:not(.collapsed)::after {
+          background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M200-440v-80h560v80H200Z'/></svg>");
+        }
+
+        &::after {
+          background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z'/></svg>");
+        }
+      }
+
+      &-body {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+
+
+.product-list {
+  &__search {
+    &-wrapper {
+      gap: 20px;
+    }
+  }
+
+  &__sort-view {
+    gap: 30px;
+  }
+
+  &__sort {
+    gap: 20px;
+
+    .form-select {
+      width: auto;
+    }
+  }
+
+  &__view {
+    gap: 20px;
+
+    .view-btn {
+      &__group {
+        gap: 8px;
+      }
+
+      &__grid,
+      &__list {
+        padding: 0;
+      }
+    }
+  }
+
+  &__meta-bar {
+    margin-bottom: 32px;
+
+    .form-control,
+    .form-select {
+      border-radius: 0;
+      border: 1px solid #E5E5E5;
+
+      &:focus {
+        border-color: #121212;
+        box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
+      }
+    }
+
+    .form-select:hover {
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
+  //Meta-bar ends
+
+
+
+
+  .product-item {
+    position: relative;
+    // padding: 10px 20px;
+    background: #F9F9F9;
+    min-height: 300px;
+    // max-height: 464px;
+
+    a {
+      img {
+        transition: transform 0.6s ease;
+      }
+
+      &:hover {
+        opacity: 1;
+
+        img {
+          -webkit-transform: scale(1.03);
+          -moz-transform: scale(1.03);
+          -ms-transform: scale(1.03);
+          transform: scale(1.03);
+        }
+      }
+    }
+
+    .product-media {
+      height: 300px;
+    }
+
+    .product-detail {
+      // position: absolute;
+      text-align: center;
+      width: 100%;
+      padding: 20px 16px;
+      // bottom: 0;
+      // left: 0;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    &__new {
+      position: absolute;
+      top: 20px;
+      left: 16px;
+      font-size: 12px;
+      color: #121212;
+    }
+
+    &__btn {
+      &.btn {
+        padding: 0;
+
+        &:active {
+          color: transparent;
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+
+      position: absolute;
+      top: 20px;
+      right: 16px;
+    }
+  }
+
+
+
+  &__pagination {
+    margin-top: 36px;
+
+    .pagination {
+      &__wrapper {
+        & .page-item {
+          .page-link {
+            font-weight: 700;
+            color: #121212;
+            border: none;
+
+            &:focus {
+              border-color: #121212;
+              box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
+            }
+          }
+
+          &:first-child .page-link {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          &:last-child .page-link {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+
+          &.active>.page-link,
+          &.active>.page-link.active {
+            color: #ffffff;
+            background-color: #121212;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Product Listing Page -- Ends
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+
+.site-footer {
+  background: #F7FAFC;
+  padding-bottom: 60px;
+  padding-top: 40px;
+
+  & .subscription {
+    &__wrapper {
+      position: relative;
+      padding: 40px 0;
+
+      &::after {
+        content: "";
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 90%;
+      }
+    }
+
+    &__detail {
+      max-width: 560px;
+      color: #18181B;
+      font-size: 32px;
+      line-height: 42px;
+      font-weight: 700;
+    }
+  }
+
+  & .main-footer {
+    padding-top: 40px;
+
+    & .about-brand {
+      max-width: 400px;
+
+      &__title {
+        color: #18181B;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 24px;
+      }
+
+      &__desc {
+        color: #2D3748;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+
+    }
+
+    & .footer-nav {
+      &__group {}
+
+      &__col {}
+
+      &__header {
+        color: #18181B;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+
+      &__item {
+        color: #18181B;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 40px;
+        // margin-block: 18px;
+      }
+    }
+  }
+}

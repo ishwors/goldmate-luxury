@@ -54,7 +54,6 @@ a {
 .btn.btn-warning {
   background: #FEE13D;
 }
-
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -265,7 +264,6 @@ a {
     }
   }
 }
-
 // Login Page CSS -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -276,11 +274,13 @@ a {
 /**----------------------------------------------**/
 // Header / Nav CSS -- Starts
 .site-header {
-  &.scroll {
-    height: 80px;
+  &_sticky{
+    &.scrolled_top {
+      background-color: transparent;
+    }
   }
-
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
   height: 104px;
@@ -369,7 +369,6 @@ a {
     }
   }
 }
-
 // Header / Nav CSS -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -378,7 +377,122 @@ a {
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
+// Landing Page Style -- Starts 
 
+.landing-page-hero {
+  padding-top: 104px;
+  padding-top: 120px;
+  height: 100dvh;
+  overflow: hidden;
+
+  &_background {
+    background: #121212;
+    background: linear-gradient(90deg, #121212 0%, #262626 50%, #121212 100%);
+  }
+
+  &__content {
+    margin-top: 30px;
+    text-align: center;
+    max-width: 564px;
+    margin-bottom: 60px;
+    &-title {      
+      font-size: 66px;
+      font-weight: 600;
+      line-height: normal;
+      color: #ffffff;
+    }
+
+    &-subtitle {
+      color: rgba(221, 221, 221, 0.87);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+    }
+    & .shop-now__btn{
+      color: #FFD700;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      &:active{
+        color: #FFD700DA;
+        border-color: transparent;
+      }
+      position: relative;
+      &::before{
+        content: "";
+        height: 1px;
+        background-color: #FFD700;
+        width: 32px;
+        border-radius: 4px;
+        position: absolute;
+        top: calc(50% - 0.5px);
+        left: -32px;
+      }
+      &::after{
+        content: "";
+        height: 1px;
+        background-color: #FFD700;
+        width: 32px;
+        border-radius: 4px;
+        position: absolute;
+        top: calc(50% - 0.5px);
+        right: -32px;
+      }
+    }
+
+    & .scroll-down__btn{
+      &-wrapper{
+        position: absolute;
+        right: -30px;
+        rotate: -90deg;
+        top: calc(50dvh - 120px);
+      }
+      color: #FFFFFF;
+      font-size: 18px; 
+      line-height: normal;
+      &:active{
+        color: #FFFFFFDA;
+        border-color: transparent;
+      }
+      position: relative;
+      &::before{
+        content: "";
+        height: 1px;
+        background-color: #FFFFFF;
+        width: 50px;
+        border-radius: 4px;
+        position: absolute;
+        top: calc(50% - 0.5px);
+        left: -58px;
+      }
+      &::after{
+        content: "";
+        height: 1px;
+        background-color: #FFFFFF;
+        width: 50px;
+        border-radius: 4px;
+        position: absolute;
+        top: calc(50% - 0.5px);
+        right: -58px;
+      }
+    }
+  }
+  &__media{
+    height: calc(100dvh - 24rem);
+    img{
+      height: inherit;
+    }
+  }
+}
+
+// Landing Page Style -- Ends 
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
 // Product Listing Page -- Starts
 .product-list-hero {
   // margin-top: 104px;
@@ -393,7 +507,7 @@ a {
 
     &-title {
       font-size: 46px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: normal;
       color: #ffffff;
     }
@@ -403,6 +517,12 @@ a {
       font-size: 18px;
       font-weight: 400;
       line-height: normal;
+    }
+  }
+  &__media{
+    img{
+      height: 400px;
+      object-fit: cover;
     }
   }
 }
@@ -497,8 +617,6 @@ a {
     }
   }
 }
-
-
 
 .product-list {
   &__search {
@@ -673,8 +791,6 @@ a {
     }
   }
 }
-
-
 // Product Listing Page -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -683,7 +799,7 @@ a {
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
-
+// Site Footer Style -- Starts 
 .site-footer {
   background: #F7FAFC;
   padding-bottom: 60px;
@@ -760,3 +876,5 @@ a {
     }
   }
 }
+
+// Site Footer Style -- Ends 

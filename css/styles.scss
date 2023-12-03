@@ -5,11 +5,16 @@
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3 {
   font-family: CabinetGrotesk, sans-serif;
   font-weight: 400;
+  line-height: normal;
 }
 
 * {
@@ -52,8 +57,9 @@ a {
 }
 
 .btn.btn-warning {
-  background: #FEE13D;
+  background: #fee13d;
 }
+
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -143,7 +149,7 @@ a {
           color: #ffffff;
           box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
 
-          &+label {
+          & + label {
             color: rgba(221, 221, 221, 0.87);
           }
         }
@@ -203,7 +209,8 @@ a {
     }
 
     & .register-link {
-      &__wrapper {}
+      &__wrapper {
+      }
     }
   }
 }
@@ -264,6 +271,7 @@ a {
     }
   }
 }
+
 // Login Page CSS -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -274,11 +282,12 @@ a {
 /**----------------------------------------------**/
 // Header / Nav CSS -- Starts
 .site-header {
-  &_sticky{
+  &_sticky {
     &.scrolled_top {
       background-color: transparent;
     }
   }
+
   position: fixed;
   width: 100%;
   top: 0;
@@ -342,7 +351,6 @@ a {
           &:active {
             border-color: transparent;
           }
-
         }
       }
 
@@ -352,7 +360,7 @@ a {
         .site-navigation {
           display: block;
 
-          & ul>li {
+          & ul > li {
             margin-bottom: 20px;
           }
 
@@ -362,13 +370,10 @@ a {
           }
         }
       }
-
-
-
-
     }
   }
 }
+
 // Header / Nav CSS -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -377,7 +382,7 @@ a {
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
-// Landing Page Style -- Starts 
+// Landing Page Style -- Starts
 
 .landing-page-hero {
   padding-top: 104px;
@@ -395,7 +400,8 @@ a {
     text-align: center;
     max-width: 564px;
     margin-bottom: 60px;
-    &-title {      
+
+    &-title {
       font-size: 66px;
       font-weight: 600;
       line-height: normal;
@@ -408,30 +414,35 @@ a {
       font-weight: 400;
       line-height: normal;
     }
-    & .shop-now__btn{
-      color: #FFD700;
+
+    & .shop-now__btn {
+      color: #ffd700;
       font-size: 18px;
       font-weight: 700;
       line-height: normal;
-      &:active{
-        color: #FFD700DA;
+
+      &:active {
+        color: #ffd700da;
         border-color: transparent;
       }
+
       position: relative;
-      &::before{
+
+      &::before {
         content: "";
         height: 1px;
-        background-color: #FFD700;
+        background-color: #ffd700;
         width: 32px;
         border-radius: 4px;
         position: absolute;
         top: calc(50% - 0.5px);
         left: -32px;
       }
-      &::after{
+
+      &::after {
         content: "";
         height: 1px;
-        background-color: #FFD700;
+        background-color: #ffd700;
         width: 32px;
         border-radius: 4px;
         position: absolute;
@@ -440,35 +451,40 @@ a {
       }
     }
 
-    & .scroll-down__btn{
-      &-wrapper{
+    & .scroll-down__btn {
+      &-wrapper {
         position: absolute;
         right: -30px;
         rotate: -90deg;
         top: calc(50dvh - 120px);
       }
-      color: #FFFFFF;
-      font-size: 18px; 
+
+      color: #ffffff;
+      font-size: 18px;
       line-height: normal;
-      &:active{
-        color: #FFFFFFDA;
+
+      &:active {
+        color: #ffffffda;
         border-color: transparent;
       }
+
       position: relative;
-      &::before{
+
+      &::before {
         content: "";
         height: 1px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         width: 50px;
         border-radius: 4px;
         position: absolute;
         top: calc(50% - 0.5px);
         left: -58px;
       }
-      &::after{
+
+      &::after {
         content: "";
         height: 1px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         width: 50px;
         border-radius: 4px;
         position: absolute;
@@ -477,15 +493,180 @@ a {
       }
     }
   }
-  &__media{
+
+  &__media {
     height: calc(100dvh - 24rem);
-    img{
+
+    img {
       height: inherit;
     }
   }
 }
 
-// Landing Page Style -- Ends 
+.section-header {
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+  }
+
+  p {
+    color: #383840;
+    line-height: normal;
+    font-weight: 400;
+    font-size: 18px;
+  }
+}
+
+.motion-media {
+  height: calc(100dvh - 104px);
+  overflow: hidden;
+  .overlay{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
+  }
+  &__info-wrapper{
+    bottom: 80px;
+    max-width: 430px;
+    h2, button{
+      color: #FFFFFF;
+    }
+    p{
+      color: #DDDDDDDD;
+    }
+    button{
+      background: transparent;
+      border: 0;
+      margin-top: 20px;
+      transition: all 0.2s linear;
+      &:not(:last-child){
+        margin-right: 20px;
+      }
+      &:hover {
+        color: #FFFFFFDA;
+        border: 0;
+      }
+    }
+  }
+  video{
+    // height: inherit;
+  }
+}
+
+.watch-feature {
+  &s {
+    // height: 100dvh;
+    background-color: #edf2f7;
+    padding-block: 120px;
+
+    &:hover {
+      img {
+        filter: saturate(100%);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+      }
+    }
+
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 200px;
+    }
+
+    &__first-col,
+    &__last-col {
+      width: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__items {
+    h4 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-block: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+
+    li:not(:last-of-type) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__image {
+    padding-inline: 80px;
+
+    img {
+      filter: saturate(20%);
+      transition: transform 0.6s ease;
+
+      &:hover {
+        cursor: pointer;
+        // filter: saturate(100%);
+        // -webkit-transform: scale(1.03);
+        // -moz-transform: scale(1.03);
+        // -ms-transform: scale(1.03);
+        // transform: scale(1.03);
+      }
+    }
+  }
+}
+
+.watch-collection {
+  &__title {
+    margin-block: 40px;
+  }
+
+  &__detail {
+    bottom: 30px;
+    left: 30px;
+    z-index: 1;
+    h3 {
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: normal;
+    }
+
+    p {
+      color: rgba(221, 221, 221, 0.87);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 24px;
+    }
+  }
+  &__item {
+    border-radius: 24px;
+    height: 600px;
+    &.dark {
+      background-color: #121212;      
+    }
+    &.light{
+      background-color: #E6E6FA;
+      h3, p{
+        color: #121212;
+      }
+    }
+  }
+
+  &__media {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+// Landing Page Style -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -519,8 +700,9 @@ a {
       line-height: normal;
     }
   }
-  &__media{
-    img{
+
+  &__media {
+    img {
       height: 400px;
       object-fit: cover;
     }
@@ -537,6 +719,39 @@ a {
       padding-block: 20px;
       margin-inline: 20px;
       border-bottom: 1px solid #dedede;
+    }
+  }
+
+  &__filter-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__selected-filters {
+    .selected-filter {
+      padding: 5px 0;
+
+      &__label {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+      }
+
+      &__btn {
+        padding: 0;
+        background: transparent;
+        border: 0;
+
+        & img {
+          background: black;
+          border-radius: 2px;
+        }
+      }
     }
   }
 
@@ -570,7 +785,7 @@ a {
       $accordion-icon-active-color: balck !important;
     }
 
-    & ul>li label {
+    & ul > li label {
       font-size: 16px;
     }
 
@@ -658,7 +873,7 @@ a {
     .form-control,
     .form-select {
       border-radius: 0;
-      border: 1px solid #E5E5E5;
+      border: 1px solid #e5e5e5;
 
       &:focus {
         border-color: #121212;
@@ -675,15 +890,13 @@ a {
     width: 100%;
     justify-content: space-between;
   }
+
   //Meta-bar ends
-
-
-
 
   .product-item {
     position: relative;
     // padding: 10px 20px;
-    background: #F9F9F9;
+    background: #f9f9f9;
     min-height: 300px;
     // max-height: 464px;
 
@@ -751,8 +964,6 @@ a {
     }
   }
 
-
-
   &__pagination {
     margin-top: 36px;
 
@@ -780,9 +991,8 @@ a {
             border-bottom-right-radius: 0;
           }
 
-
-          &.active>.page-link,
-          &.active>.page-link.active {
+          &.active > .page-link,
+          &.active > .page-link.active {
             color: #ffffff;
             background-color: #121212;
           }
@@ -791,6 +1001,7 @@ a {
     }
   }
 }
+
 // Product Listing Page -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -799,9 +1010,9 @@ a {
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
-// Site Footer Style -- Starts 
+// Site Footer Style -- Starts
 .site-footer {
-  background: #F7FAFC;
+  background: #f7fafc;
   padding-bottom: 60px;
   padding-top: 40px;
 
@@ -823,7 +1034,7 @@ a {
 
     &__detail {
       max-width: 560px;
-      color: #18181B;
+      color: #18181b;
       font-size: 32px;
       line-height: 42px;
       font-weight: 700;
@@ -837,7 +1048,7 @@ a {
       max-width: 400px;
 
       &__title {
-        color: #18181B;
+        color: #18181b;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -845,21 +1056,22 @@ a {
       }
 
       &__desc {
-        color: #2D3748;
+        color: #2d3748;
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
       }
-
     }
 
     & .footer-nav {
-      &__group {}
+      &__group {
+      }
 
-      &__col {}
+      &__col {
+      }
 
       &__header {
-        color: #18181B;
+        color: #18181b;
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
@@ -867,7 +1079,7 @@ a {
       }
 
       &__item {
-        color: #18181B;
+        color: #18181b;
         font-size: 14px;
         font-weight: 400;
         line-height: 40px;
@@ -877,4 +1089,4 @@ a {
   }
 }
 
-// Site Footer Style -- Ends 
+// Site Footer Style -- Ends

@@ -1,5 +1,5 @@
+// Site Header Sticky 
 document.addEventListener('DOMContentLoaded', function () {
-    // let prevScrollPos = window.scrollY;
     const stickyHeader = document.querySelector('.site-header_sticky');
     window.onscroll = function () {
         const currentScrollPos = window.scrollY;
@@ -9,11 +9,17 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             stickyHeader.classList.remove('scrolled_top');
         }
-
-        // prevScrollPos = currentScrollPos;
     };
 });
 
+
+// Scroll Down Button 
+function scrollToDown() {
+    // document.getElementById('motionMedia').scrollIntoView({ behavior: 'smooth' });
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const offset = document.getElementById('motionMedia').offsetTop - 104;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+}
 
 
 

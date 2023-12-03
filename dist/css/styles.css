@@ -17489,6 +17489,31 @@ a:hover {
   margin-inline: 20px;
   border-bottom: 1px solid #dedede;
 }
+.product-list-anav__filter-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+.product-list-anav__filter-btn:hover {
+  opacity: 0.8;
+}
+.product-list-anav__selected-filters .selected-filter {
+  padding: 5px 0;
+}
+.product-list-anav__selected-filters .selected-filter__label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+.product-list-anav__selected-filters .selected-filter__btn {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+.product-list-anav__selected-filters .selected-filter__btn img {
+  background: black;
+  border-radius: 2px;
+}
 .product-list-anav .filter__accordions {
   max-height: calc(100dvh - 192px);
   overflow-y: scroll;

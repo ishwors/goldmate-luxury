@@ -17,11 +17,11 @@
       <button class="btn mobile-nav__btn" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
         <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
-          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#E2E2E2"/>
+          <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="#E2E2E2" />
         </svg>
       </button>
-      <div class="offcanvas offcanvas-start container mobile-nav__drawer" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-        aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas offcanvas-start container mobile-nav__drawer" data-bs-scroll="true" tabindex="-1"
+        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header d-flex justify-content-between">
           <div class="site-branding">
             <a class="logo__wrapper" href="#"><img class="logo" src="./assets/svg/Logo-off.svg"
@@ -39,7 +39,7 @@
             </ul>
           </nav>
         </div>
-      </div> 
+      </div>
       <!-- ******************************* -->
       <!-- ******************************* -->
       <div class="site-branding">
@@ -65,14 +65,14 @@
   <!-- ******************************* -->
   <!-- ******************************* -->
   <main>
-    <section id="product-list" class="product-list-hero product-list-hero_background">
+    <section class="product-list-hero product-list-hero_background">
       <div class="container">
         <div class="row">
           <div class="col-md-5">
             <div class="product-list-hero__media">
               <figure class="d-flex justify-content-center">
                 <img class="img-fluid" src="./assets/images/product-list-banner.png" alt="">
-              </figure>              
+              </figure>
             </div>
           </div>
           <div class="col-md-7">
@@ -116,7 +116,30 @@
           <div class="col-md-3">
             <div class="product-list-anav">
               <div class="product-list-anav__title__wrapper">
-                <span class="product-list-anav__title">Filter</span>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="product-list-anav__title">Filter</span>
+                  <button class="product-list-anav__filter-btn" type="reset">Clear all</button>
+                </div>
+                <div class="product-list-anav__selected-filters">
+                  <ul class="list-unstyled m-0">
+                    <li>
+                      <div class="selected-filter d-flex align-items-center gap-2">
+                        <button id="resetMenWatch" type="button" class="selected-filter__btn">
+                          <img src="./assets/svg/close_icon.svg" alt="">
+                        </button>
+                        <span class="selected-filter__label" for="">Men’s Watch</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="selected-filter d-flex align-items-center gap-2">
+                        <button id="resetWomenWatch" type="button" class="selected-filter__btn">
+                          <img src="./assets/svg/close_icon.svg" alt="">
+                        </button>
+                        <span class="selected-filter__label" for="">Women’s Watch</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div class="accordion filter__accordions" id="accordionPanelsStayOpenExample">

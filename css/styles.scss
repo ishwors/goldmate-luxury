@@ -539,7 +539,35 @@ a {
       border-bottom: 1px solid #dedede;
     }
   }
-
+  &__filter-btn{
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  &__selected-filters{
+    
+    .selected-filter{
+      padding: 5px 0;
+      &__label{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+      }
+      &__btn{
+        padding: 0;
+        background: transparent;
+        border: 0;
+        &
+        img{
+          background: black;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
   position: sticky !important;
   top: 0;
   padding-bottom: 20px;

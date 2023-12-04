@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+
   &::-webkit-scrollbar {
     width: 10px;
   }
@@ -180,7 +181,12 @@ a {
         & .error-message {
           font-size: 14px;
           padding: 0 10px;
+          color: #733a3a;
         }
+        // & .form-control.input-error{
+        //   color: #733a3a;
+        //   box-shadow: 0 0 0 0.25rem #733a3aad;
+        // }
       }
 
       & .icon {
@@ -374,8 +380,9 @@ a {
 
       &__drawer {
         max-width: 334px;
-        button{
-          &:focus{
+
+        button {
+          &:focus {
             box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%) !important;
           }
         }
@@ -522,6 +529,14 @@ a {
 
     img {
       height: inherit;
+      transition: transform 0.6s ease;
+
+      &:hover {
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        transform: scale(1.03);
+      }
     }
   }
 }
@@ -556,24 +571,25 @@ a {
     max-width: 430px;
 
     h2,
-    button
-     {
+    button {
       color: #FFFFFF;
     }
+
     a.shop-now__btn {
       color: #fee13d;
       margin-top: 20px;
       transition: all 0.2s linear;
-      &:hover{
+
+      &:hover {
         color: #fee13dde;
       }
     }
+
     p {
       color: #DDDDDDDD;
     }
 
-    button
-    {
+    button {
       background: transparent;
       border: 0;
       margin-top: 20px;
@@ -672,7 +688,7 @@ a {
 
 .watch-collection {
   &__title {
-    margin-block: 40px;
+    margin-block: 40px;    
   }
 
   &__detail {
@@ -759,6 +775,8 @@ a {
     img {
       height: 400px;
       object-fit: cover;
+
+      
     }
   }
 }
@@ -1142,3 +1160,28 @@ a {
 }
 
 // Site Footer Style -- Ends
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+/**----------------------------------------------**/
+// Animation Variables Style -- Starts
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+// Animation Variables Style -- Ends

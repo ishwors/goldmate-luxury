@@ -1,4 +1,4 @@
-
+//Skicky Header
 document.addEventListener("DOMContentLoaded", function () {
     const stickyHeader = document.querySelector(".site-header");
     stickyHeader.classList.add("scrolled_top");
@@ -59,16 +59,6 @@ function loadProducts(data) {
 //Animation
 const animateSiteHeader = document.querySelector('.site-header__inner');
 animateSiteHeader.classList.add('animate__animated', 'animate__fadeIn');
-// animateSiteHeader.style.setProperty('--animate-duration', '5s');
-
-// const animateProductCard = document.querySelector('.watch-collection__item');
-// animateProductCard.classList.add('animate__animated', 'animate__slideInLeft');
-// 
-
-
-
-
-
 
 
 const animateProductCard = document.querySelector('.product-list__pagination');
@@ -79,13 +69,3 @@ animateProductCard.style.setProperty('--animate-duration', '1.5s');
 const animateLandingBannerImg = document.querySelector('.landing-page-hero__media');
 animateLandingBannerImg.classList.add('animate__animated', 'animate__bounceInUp');
 animateLandingBannerImg.style.setProperty('--animate-duration', '1.5s');
-
-// animate__animated animate__fadeInUp
-
-
-
-// const animateFooterTop = document.querySelector('.site-header__inner');
-// animateFooterTop.classList.add('animate__animated', 'animate__slideInDown');
-
-// const animateMainFooter = document.querySelector('.main-footer');
-// animateMainFooter.classList.add('animate__animated', 'animate__slideInDown');

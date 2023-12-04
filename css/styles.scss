@@ -557,6 +557,37 @@ select:-webkit-autofill:focus {
   }
 }
 
+@media screen and (max-width: 425px) {
+  .landing-page-hero {
+    padding-top: 120px;
+
+    &__content {
+      margin-top: 20px;
+      margin-bottom: 40px;
+
+      &-title {
+        font-size: 46px;
+      }
+
+      &-subtitle {
+        font-size: 16px;
+      }
+
+      & .shop-now__btn {
+        font-size: 16px;
+      }
+
+      & .scroll-down__btn {
+        font-size: 16px;
+      }
+    }
+
+    &__media {
+      height: calc(100dvh - 20rem);
+    }
+  }
+}
+
 .section-header {
   h2 {
     font-size: 48px;
@@ -568,6 +599,18 @@ select:-webkit-autofill:focus {
     line-height: normal;
     font-weight: 400;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .section-header {
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 16px;
+    }
   }
 }
 
@@ -626,15 +669,22 @@ select:-webkit-autofill:focus {
   }
 
   video {}
+}
 
-  @media screen and (max-width: 968px) {
-    video {
-      height: 100%;
-      width: auto;
-      object-fit: cover;
-    }
+@media screen and (max-width: 425px) {
+  .motion-media {
+    height: calc(100dvh - 80px);
   }
 }
+
+@media screen and (max-width: 968px) {
+  video {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+}
+
 
 .watch-feature {
   &s {
@@ -653,14 +703,17 @@ select:-webkit-autofill:focus {
     }
 
     &__wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 200px;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+        // flex-wrap: wrap; 
     }
 
     &__first-col,
     &__last-col {
       width: auto;
+      max-width: 580px;
     }
   }
 
@@ -686,12 +739,10 @@ select:-webkit-autofill:focus {
   }
 
   &__image {
-    padding-inline: 80px;
-
     img {
       filter: saturate(20%);
       transition: transform 0.6s ease;
-
+      max-height: 660px;
       &:hover {
         cursor: pointer;
         // filter: saturate(100%);
@@ -699,6 +750,49 @@ select:-webkit-autofill:focus {
         // -moz-transform: scale(1.03);
         // -ms-transform: scale(1.03);
         // transform: scale(1.03);
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px){
+  .watch-feature {
+    &s {
+      padding-block: 80px;
+      
+      &__wrapper {
+        flex-wrap: wrap; 
+        flex-direction: column-reverse;
+      }
+    }  
+    &__image {  
+      padding-bottom: 20px;
+      img {
+        max-height: 300px;          
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px){
+  .watch-feature {
+    &__items {
+      h4 {
+        font-size: 18px;
+        margin-block: 8px;
+      }
+  
+      p {
+        font-size: 14px;
+      }
+  
+      li:not(:last-of-type) {
+        margin-bottom: 30px;
+      }
+    }
+  
+    &__image {  
+      padding-bottom: 20px;
+      img {
+        max-height: 300px;          
       }
     }
   }
@@ -753,7 +847,26 @@ select:-webkit-autofill:focus {
     bottom: 0;
   }
 }
-
+@media screen and (max-width: 425px){
+ .watch-collection {
+  &__detail {
+    h3 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    height: 400px;   
+  }
+  &__media {
+    bottom: auto;
+    top: 0;
+  }
+}
+}
 // Landing Page Style -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -795,6 +908,31 @@ select:-webkit-autofill:focus {
       object-fit: cover;
     }
   }
+}
+@media screen and (max-width: 425px){
+  .product-list-hero {
+  // margin-top: 104px;
+  padding-top: 114px;
+
+  &__content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    &-title {
+      font-size: 34px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+    }
+  }
+
+  &__media {
+    img {
+      height: 340px;
+    }
+  }
+}
 }
 
 .product-list-anav {
@@ -1176,6 +1314,24 @@ select:-webkit-autofill:focus {
     }
   }
 }
+@media screen and (max-width: 425px){
+  .site-footer {
+    padding-bottom: 40px;
+    padding-top: 30px;
+  
+    & .subscription {
+  
+      &__detail {
+        font-size: 28px;
+        line-height: 30px;
+      }
+    }
+  
+    & .main-footer {
+      padding-top: 30px;  
+    }
+  }
+}
 
 // Site Footer Style -- Ends
 /**----------------------------------------------**/
@@ -1185,25 +1341,4 @@ select:-webkit-autofill:focus {
 /**----------------------------------------------**/
 /**----------------------------------------------**/
 /**----------------------------------------------**/
-// Animation Variables Style -- Starts
-@keyframes grow-and-shrink {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.5);
-  }
-}
-
-@keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
-
-// Animation Variables Style -- Ends
+// 

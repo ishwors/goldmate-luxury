@@ -7,6 +7,23 @@
 
 html {
   scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #6a6a6a;
+    transition: all 0.5s ease-out;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #2a2a2a;
+  }
 }
 
 h1,
@@ -59,6 +76,8 @@ a {
 .btn.btn-warning {
   background: #fee13d;
 }
+
+
 
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -149,7 +168,7 @@ a {
           color: #ffffff;
           box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
 
-          & + label {
+          &+label {
             color: rgba(221, 221, 221, 0.87);
           }
         }
@@ -209,8 +228,7 @@ a {
     }
 
     & .register-link {
-      &__wrapper {
-      }
+      &__wrapper {}
     }
   }
 }
@@ -356,11 +374,16 @@ a {
 
       &__drawer {
         max-width: 334px;
+        button{
+          &:focus{
+            box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%) !important;
+          }
+        }
 
         .site-navigation {
           display: block;
 
-          & ul > li {
+          & ul>li {
             margin-bottom: 20px;
           }
 
@@ -520,37 +543,62 @@ a {
 .motion-media {
   height: calc(100dvh - 104px);
   overflow: hidden;
-  .overlay{
+
+  .overlay {
     z-index: 1;
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%);
   }
-  &__info-wrapper{
+
+  &__info-wrapper {
     bottom: 80px;
     max-width: 430px;
-    h2, button{
+
+    h2,
+    button
+     {
       color: #FFFFFF;
     }
-    p{
+    a.shop-now__btn {
+      color: #fee13d;
+      margin-top: 20px;
+      transition: all 0.2s linear;
+      &:hover{
+        color: #fee13dde;
+      }
+    }
+    p {
       color: #DDDDDDDD;
     }
-    button{
+
+    button
+    {
       background: transparent;
       border: 0;
       margin-top: 20px;
+      margin-left: 20px;
       transition: all 0.2s linear;
-      &:not(:last-child){
+
+      &:not(:last-child) {
         margin-right: 20px;
       }
+
       &:hover {
         color: #FFFFFFDA;
         border: 0;
       }
     }
   }
-  video{
-    // height: inherit;
+
+  video {}
+
+  @media screen and (max-width: 968px) {
+    video {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
   }
 }
 
@@ -631,10 +679,11 @@ a {
     bottom: 30px;
     left: 30px;
     z-index: 1;
+
     h3 {
       color: #ffffff;
       font-size: 28px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: normal;
     }
 
@@ -646,15 +695,20 @@ a {
       margin-bottom: 24px;
     }
   }
+
   &__item {
     border-radius: 24px;
-    height: 600px;
+    height: 500px;
+
     &.dark {
-      background-color: #121212;      
+      background-color: #121212;
     }
-    &.light{
+
+    &.light {
       background-color: #E6E6FA;
-      h3, p{
+
+      h3,
+      p {
         color: #121212;
       }
     }
@@ -785,7 +839,7 @@ a {
       $accordion-icon-active-color: balck !important;
     }
 
-    & ul > li label {
+    & ul>li label {
       font-size: 16px;
     }
 
@@ -991,8 +1045,8 @@ a {
             border-bottom-right-radius: 0;
           }
 
-          &.active > .page-link,
-          &.active > .page-link.active {
+          &.active>.page-link,
+          &.active>.page-link.active {
             color: #ffffff;
             background-color: #121212;
           }
@@ -1064,11 +1118,9 @@ a {
     }
 
     & .footer-nav {
-      &__group {
-      }
+      &__group {}
 
-      &__col {
-      }
+      &__col {}
 
       &__header {
         color: #18181b;

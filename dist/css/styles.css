@@ -17052,6 +17052,21 @@ textarea.form-control-lg {
 html {
   scroll-behavior: smooth;
 }
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #6a6a6a;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
 
 h1,
 h2,
@@ -17325,6 +17340,9 @@ a:hover {
   .site-header .mobile-nav__drawer {
     max-width: 334px;
   }
+  .site-header .mobile-nav__drawer button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(99, 100, 100, 0.25) !important;
+  }
   .site-header .mobile-nav__drawer .site-navigation {
     display: block;
   }
@@ -17470,8 +17488,17 @@ a:hover {
   bottom: 80px;
   max-width: 430px;
 }
-.motion-media__info-wrapper h2, .motion-media__info-wrapper button {
+.motion-media__info-wrapper h2,
+.motion-media__info-wrapper button {
   color: #FFFFFF;
+}
+.motion-media__info-wrapper a.shop-now__btn {
+  color: #fee13d;
+  margin-top: 20px;
+  transition: all 0.2s linear;
+}
+.motion-media__info-wrapper a.shop-now__btn:hover {
+  color: rgba(254, 225, 61, 0.8705882353);
 }
 .motion-media__info-wrapper p {
   color: rgba(221, 221, 221, 0.8666666667);
@@ -17480,6 +17507,7 @@ a:hover {
   background: transparent;
   border: 0;
   margin-top: 20px;
+  margin-left: 20px;
   transition: all 0.2s linear;
 }
 .motion-media__info-wrapper button:not(:last-child) {
@@ -17489,6 +17517,15 @@ a:hover {
   color: rgba(255, 255, 255, 0.8549019608);
   border: 0;
 }
+@media screen and (max-width: 968px) {
+  .motion-media video {
+    height: 100%;
+    width: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 .watch-features {
   background-color: #edf2f7;
   padding-block: 120px;
@@ -17543,7 +17580,7 @@ a:hover {
 .watch-collection__detail h3 {
   color: #ffffff;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
 .watch-collection__detail p {
@@ -17555,7 +17592,7 @@ a:hover {
 }
 .watch-collection__item {
   border-radius: 24px;
-  height: 600px;
+  height: 500px;
 }
 .watch-collection__item.dark {
   background-color: #121212;
@@ -17563,7 +17600,8 @@ a:hover {
 .watch-collection__item.light {
   background-color: #E6E6FA;
 }
-.watch-collection__item.light h3, .watch-collection__item.light p {
+.watch-collection__item.light h3,
+.watch-collection__item.light p {
   color: #121212;
 }
 .watch-collection__media {

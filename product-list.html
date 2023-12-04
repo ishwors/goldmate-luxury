@@ -5,14 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop | Goldmate Watch</title>
-  <link rel="stylesheet" href="dist/css/styles.css" />
+
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous" />
   <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="dist/css/styles.css" />
   <script src="products.json"></script>
 </head>
 
 <body>
-  <header class="site-header site-header_background site-header_sticky">
-    <div class="container d-flex align-items-center justify-content-between h-100">
+  <header class="site-header site-header_background">
+    <div class="site-header__inner container d-flex align-items-center justify-content-between h-100">
       <!-- ******************************* -->
       <!-- ******************************* -->
       <!-- Mobile View Menu Drawer -->
@@ -73,7 +77,7 @@
           <div class="col-md-5">
             <div class="product-list-hero__media">
               <figure class="d-flex justify-content-center">
-                <img class="img-fluid" src="./assets/images/product-list-banner.png" alt="">
+                <img class="img-fluid animate__animated animate__fadeInLeft" src="./assets/images/product-list-banner.png" alt="">
               </figure>
             </div>
           </div>
@@ -97,9 +101,9 @@
     <!-- ******************************* -->
     <!-- ******************************* -->
     <!-- ******************************* -->
-    <section id="productList" class="product-list">
+    <section id="productList" class="product-list pt-4">
       <div class="container">
-        <div class="breadcrumb-wrapper my-4 py-2">
+        <div class="breadcrumb-wrapper mb-4 py-2">
           <nav
             style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
             aria-label="breadcrumb">
@@ -465,8 +469,8 @@
             <!-- ******************************* -->
             <!-- ******************************* -->
             <div class="product-list__wrapper">
-              <div class="row product-item__card-wrapper">                
-                <!-- Product Card Here -->               
+              <div class="row product-item__card-wrapper">
+                <!-- Product Card Here -->
               </div>
 
             </div>
@@ -510,14 +514,15 @@
   <!-- ******************************* -->
   <footer class="site-footer">
     <div class="container">
-      <div class="subscription__wrapper d-flex justify-content-between align-items-center flex-wrap">
+      <div
+        class="subscription__wrapper animate__animated animate__fadeInUp d-flex justify-content-between align-items-center flex-wrap">
         <p class="subscription__detail">Chronicle Connection: Subscribe for Exclusive Updates</p>
         <button class="subscription__btn btn btn-dark rounded-5 px-4" type="button">Subscribe</button>
       </div>
 
       <!-- <hr class="ms-auto w-75" style="margin: 40px 0;"> -->
 
-      <div class="main-footer">
+      <div class="main-footer animate__animated animate__fadeInUp">
         <div class="row">
           <div class="col-md-7">
             <div class="about-brand">
@@ -564,7 +569,7 @@
                   <ul class="list-unstyled">
                     <div class="footer-nav__header">Company</div>
                     <li class="footer-nav__item"><a href="#">About</a></li>
-                    <li class="footer-nav__item"><a href="#">Features</a></li>
+                    <li class="footer-nav__item"><a href="#watchFeatures">Features</a></li>
                     <li class="footer-nav__item"><a href="#">Works</a></li>
                     <li class="footer-nav__item"><a href="#">Career</a></li>
                   </ul>
@@ -581,9 +586,9 @@
                 <div class="footer-nav__col">
                   <ul class="list-unstyled">
                     <div class="footer-nav__header">Quick Links</div>
-                    <li class="footer-nav__item"><a href="#">Men</a></li>
-                    <li class="footer-nav__item"><a href="#">Women</a></li>
-                    <li class="footer-nav__item"><a href="#">Brands</a></li>
+                    <li class="footer-nav__item"><a href="./product-list.html#productList">Men</a></li>
+                    <li class="footer-nav__item"><a href="./product-list.html#productList">Women</a></li>
+                    <li class="footer-nav__item"><a href="./product-list.html#productList">Brands</a></li>
                   </ul>
                 </div>
               </div>
@@ -594,8 +599,15 @@
     </div>
     </div>
   </footer>
+
+
   <script src="js/script.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+    ScrollReveal().reveal('.product-list-hero__content', { delay: 50, duration: 1250 });
+    ScrollReveal().reveal('.product-list', { delay: 60, duration: 750 });
+    // ScrollReveal().reveal('.site-footer', { delay: 50, duration: 1250 });
+  </script>
 </body>
 
 </html>

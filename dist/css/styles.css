@@ -10984,6 +10984,10 @@ html::-webkit-scrollbar-thumb:hover {
   background: #2a2a2a;
 }
 
+main {
+  background: #f7fafc;
+}
+
 h1,
 h2,
 h3 {
@@ -11037,7 +11041,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #FFFFFF;
+  -webkit-text-fill-color: #ffffff;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -11221,7 +11225,7 @@ select:-webkit-autofill:focus {
   height: 104px;
   background-color: #121212;
 }
-.site-header_sticky.scrolled_top {
+.site-header.scrolled_top {
   background-color: transparent;
 }
 .site-header .site-navigation__header-link {
@@ -11425,7 +11429,7 @@ select:-webkit-autofill:focus {
 }
 .motion-media__info-wrapper h2,
 .motion-media__info-wrapper button {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .motion-media__info-wrapper a.shop-now__btn {
   color: #fee13d;
@@ -11533,7 +11537,7 @@ select:-webkit-autofill:focus {
   background-color: #121212;
 }
 .watch-collection__item.light {
-  background-color: #E6E6FA;
+  background-color: #e6e6fa;
 }
 .watch-collection__item.light h3,
 .watch-collection__item.light p {
@@ -11580,7 +11584,7 @@ select:-webkit-autofill:focus {
 
 .product-list-anav {
   position: sticky !important;
-  top: 0;
+  top: 104px;
   padding-bottom: 20px;
 }
 .product-list-anav__title {
@@ -11619,7 +11623,7 @@ select:-webkit-autofill:focus {
   border-radius: 2px;
 }
 .product-list-anav .filter__accordions {
-  max-height: calc(100dvh - 192px);
+  max-height: calc(100dvh - 300px);
   overflow-y: scroll;
 }
 .product-list-anav .filter__accordions::-webkit-scrollbar {
@@ -11671,6 +11675,9 @@ select:-webkit-autofill:focus {
   padding-bottom: 20px;
 }
 
+.product-list {
+  background-color: #ffffff;
+}
 .product-list__search-wrapper {
   gap: 20px;
 }
@@ -11807,7 +11814,7 @@ select:-webkit-autofill:focus {
 .site-footer .subscription__wrapper::after {
   content: "";
   height: 1px;
-  background-color: black;
+  background-color: #e4e4e7;
   position: absolute;
   right: 0;
   bottom: 0;

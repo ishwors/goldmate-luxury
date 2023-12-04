@@ -6,15 +6,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Goldmate Watch</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    crossorigin="anonymous" />
   <script src="./js/jquery-3.7.1.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="dist/css/styles.css" />
 </head>
 
 <body>
-  <header class="site-header site-header_background site-header_sticky">
-    <div class="container d-flex align-items-center justify-content-between h-100">
+  <header class="site-header site-header_background">
+    <div class="site-header__inner container d-flex align-items-center justify-content-between h-100">
       <!-- ******************************* -->
       <!-- ******************************* -->
       <!-- Mobile View Menu Drawer -->
@@ -86,7 +88,8 @@
 
         </div>
         <figure class="landing-page-hero__media">
-          <img class="img-fluid d-block mx-auto" src="./assets/images/black-watch-1.png" alt="">
+          <img class="img-fluid d-block mx-auto   animate__animated animate__fadeInUp"
+            src="./assets/images/black-watch-1.png" alt="">
         </figure>
       </div>
     </section>
@@ -102,8 +105,8 @@
               <p>Immerse Yourself in the Art of Timekeeping</p>
             </div>
             <div class="motion-media__btns">
-              <a class="shop-now__btn" href="./product-list.html#product-list" target="_blank">Shop Now</a>
-              <button class=" animate__animated animate__bounce animate__repeat-2" type="button">
+              <a class="shop-now__btn" href="./product-list.html#product-list" target="_blank">Shop now</a>
+              <button class=" " type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#FFFFFF">
                   <path
                     d="M320-273v-414q0-17 12-28.5t28-11.5q5 0 10.5 1.5T381-721l326 207q9 6 13.5 15t4.5 19q0 10-4.5 19T707-446L381-239q-5 3-10.5 4.5T360-233q-16 0-28-11.5T320-273Zm80-207Zm0 134 210-134-210-134v268Z" />
@@ -112,7 +115,7 @@
               </button>
             </div>
           </div>
-        </div>        
+        </div>
       </div>
       <video class="position-absolute" width="100%" autoplay muted loop>
         <source src="./assets/images/goldmate-luxury.mp4" type="video/mp4">
@@ -190,8 +193,8 @@
                 <a class="btn btn-light rounded-5" href="">Shop now</a>
               </div>
               <div class="watch-collection__media position-absolute">
-                <img class="img-fluid d-block ms-auto" src="./assets/images/modal-2.png"
-                  alt="Chronicle Collections Feature">
+                <img class="img-fluid d-block ms-auto   animate__animated animate__fadeInUp"
+                  src="./assets/images/modal-2.png" alt="Chronicle Collections Feature">
               </div>
             </div>
           </div>
@@ -203,11 +206,13 @@
                 <a class="btn btn-light rounded-5" href="">Shop now</a>
               </div>
               <div class="watch-collection__media position-absolute">
-                <img class="img-fluid d-block ms-auto" src="./assets/images/modal-1.png"
-                  alt="Chronicle Collections Feature">
+                <img class="img-fluid d-block ms-auto   animate__animated animate__fadeInUp"
+                  src="./assets/images/modal-1.png" alt="Chronicle Collections Feature">
               </div>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
@@ -220,14 +225,15 @@
   <!-- ******************************* -->
   <footer class="site-footer">
     <div class="container">
-      <div class="subscription__wrapper d-flex justify-content-between align-items-center flex-wrap">
+      <div
+        class="subscription__wrapper animate__animated animate__fadeInUp d-flex justify-content-between align-items-center flex-wrap">
         <p class="subscription__detail">Chronicle Connection: Subscribe for Exclusive Updates</p>
         <button class="subscription__btn btn btn-dark rounded-5 px-4" type="button">Subscribe</button>
       </div>
 
       <!-- <hr class="ms-auto w-75" style="margin: 40px 0;"> -->
 
-      <div class="main-footer">
+      <div class="main-footer animate__animated animate__fadeInUp">
         <div class="row">
           <div class="col-md-7">
             <div class="about-brand">
@@ -304,15 +310,19 @@
     </div>
     </div>
   </footer>
+
+
   <script src="js/script.js"></script>
-  <script src="js/bootstrap.min.js"></script>   
+  <script src="js/bootstrap.min.js"></script>
   <script>
-    ScrollReveal().reveal('.landing-page-hero__content', { delay: 50, duration: 1250 });
-    ScrollReveal().reveal('.motion-media__info-wrapper', { delay: 50, duration: 1250 });
-    ScrollReveal().reveal('.watch-features__first-col', { delay: 50, duration: 1250 });
-    ScrollReveal().reveal('.watch-collection', { delay: 50, duration: 1250 });
-    ScrollReveal().reveal('.site-footer', { delay: 50, duration: 1250 });
-  </script>     
+    ScrollReveal().reveal('.landing-page-hero__content', { delay: 0, duration: 1250 });
+    ScrollReveal().reveal('.section-header', { delay: 50, duration: 1250 });
+    ScrollReveal().reveal('.motion-media__btns', { delay: 50, duration: 1250 });
+    ScrollReveal().reveal('.watch-feature__items', { delay: 50, duration: 1250 });
+    ScrollReveal().reveal('.watch-collection__detail', { delay: 50, duration: 1250 });
+    // ScrollReveal().reveal('.site-footer', { delay: 50, duration: 1250 });
+ 
+  </script>
 </body>
 
 </html>

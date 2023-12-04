@@ -1,10 +1,9 @@
 
-// Site Header Sticky
 document.addEventListener("DOMContentLoaded", function () {
-    const stickyHeader = document.querySelector(".site-header_sticky");
+    const stickyHeader = document.querySelector(".site-header");
+    stickyHeader.classList.add("scrolled_top");
     window.onscroll = function () {
         const currentScrollPos = window.scrollY;
-
         if (currentScrollPos === 0) {
             stickyHeader.classList.add("scrolled_top");
         } else {
@@ -33,14 +32,14 @@ function loadProducts(data) {
     const wrapper = document.querySelector(".product-item__card-wrapper");
 
     const div = document.createElement("div");
-    div.classList.add("col-md-4", "mb-4", "product-item__card");
+    div.classList.add("col-lg-4", "col-md-6", "mb-4", "product-item__card", 'animate__animated', 'animate__pulse');
     div.innerHTML = `
     <div class="product-item">
         <a href="#">
             <figure class="product-media d-flex justify-content-center mb-0">
                 <img class="img-fluid" src="${data.imageUrl}" alt="${data.name}">
             </figure>
-            <div class="product-detail">
+            <div class="product-detail animate__animated animate__fadeInUp" >
                 <h2>${data.name}</h2>
                 <p><span class="me-1">${data.currency}</span><span>${data.price.toFixed(2)}</span></p>
             </div>
@@ -51,14 +50,42 @@ function loadProducts(data) {
                 <path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
             </svg>
         </button>
-    </div>
+    </div>    
     `;
-
     wrapper.appendChild(div);
 }
 
 
 //Animation
-const animateSiteHeader = document.querySelector('.section-header');
-animateSiteHeader.classList.add('animate__animated', 'animate__fadeInUp');
+const animateSiteHeader = document.querySelector('.site-header__inner');
+animateSiteHeader.classList.add('animate__animated', 'animate__fadeIn');
 // animateSiteHeader.style.setProperty('--animate-duration', '5s');
+
+// const animateProductCard = document.querySelector('.watch-collection__item');
+// animateProductCard.classList.add('animate__animated', 'animate__slideInLeft');
+// 
+
+
+
+
+
+
+
+const animateProductCard = document.querySelector('.product-list__pagination');
+animateProductCard.classList.add('animate__animated', 'animate__fadeInUp');
+animateProductCard.style.setProperty('--animate-duration', '1.5s');
+
+
+const animateLandingBannerImg = document.querySelector('.landing-page-hero__media');
+animateLandingBannerImg.classList.add('animate__animated', 'animate__bounceInUp');
+animateLandingBannerImg.style.setProperty('--animate-duration', '1.5s');
+
+// animate__animated animate__fadeInUp
+
+
+
+// const animateFooterTop = document.querySelector('.site-header__inner');
+// animateFooterTop.classList.add('animate__animated', 'animate__slideInDown');
+
+// const animateMainFooter = document.querySelector('.main-footer');
+// animateMainFooter.classList.add('animate__animated', 'animate__slideInDown');

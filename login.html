@@ -8,7 +8,8 @@
 
   <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-10/css/all.min.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-10/css/all.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="dist/css/styles.css" />
 </head>
 
@@ -81,7 +82,7 @@
                 Login
               </button>
             </form>
-            
+
             <p class="register-link__wrapper text-center">
               Don’t have an account?
               <a class="register-link" href="#" target="">Register</a>
@@ -91,8 +92,27 @@
       </div>
     </div>
   </section>
-  
+
   <script src="js/script.js"></script>
+  <script>
+    // Passport eye open/slash
+    const passwordInput = document.getElementById("txtPassword"),
+      toggle = document.getElementById("btnToggle"),
+      icon = document.getElementById("eyeIcon");
+
+    function togglePassword() {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      } else {
+        passwordInput.type = "password";
+        icon.classList.add("fa-eye-slash");
+      }
+    }
+    toggle.addEventListener("click", togglePassword, false);
+    passwordInput.addEventListener("keyup", checkInput, false);
+  </script>
   <script>
     ScrollReveal().reveal('.login-card', { duration: 800 });
   </script>

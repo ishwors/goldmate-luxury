@@ -14,25 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Passport eye open/slash
-let passwordInput = document.getElementById("txtPassword"),
-    toggle = document.getElementById("btnToggle"),
-    icon = document.getElementById("eyeIcon");
-
-function togglePassword() {
-    if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
-    } else {
-        passwordInput.type = "password";
-        icon.classList.add("fa-eye-slash");
-    }
-}
-toggle.addEventListener("click", togglePassword, false);
-passwordInput.addEventListener("keyup", checkInput, false);
-
-
 // Scroll Down Button
 function scrollToDown() {
     // document.getElementById('motionMedia').scrollIntoView({ behavior: 'smooth' });
@@ -47,6 +28,7 @@ function scrollToDown() {
 $(document).ready(function (e) {
     productObject.products.forEach((product) => loadProducts(product));
 });
+
 function loadProducts(data) {
     const wrapper = document.querySelector(".product-item__card-wrapper");
 
@@ -74,3 +56,9 @@ function loadProducts(data) {
 
     wrapper.appendChild(div);
 }
+
+
+//Animation
+const animateSiteHeader = document.querySelector('.section-header');
+animateSiteHeader.classList.add('animate__animated', 'animate__fadeInUp');
+// animateSiteHeader.style.setProperty('--animate-duration', '5s');

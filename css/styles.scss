@@ -257,7 +257,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .login-banner {
     display: none;
   }
@@ -368,7 +368,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .site-header {
     height: 80px;
 
@@ -557,7 +557,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .landing-page-hero {
     padding-top: 120px;
 
@@ -602,7 +602,7 @@ select:-webkit-autofill:focus {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .section-header {
     h2 {
       font-size: 34px;
@@ -671,7 +671,7 @@ select:-webkit-autofill:focus {
   video {}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .motion-media {
     height: calc(100dvh - 80px);
   }
@@ -707,7 +707,7 @@ select:-webkit-autofill:focus {
       display: flex;
       gap: 20px;
       justify-content: space-between;
-        // flex-wrap: wrap; 
+      // flex-wrap: wrap; 
     }
 
     &__first-col,
@@ -743,6 +743,7 @@ select:-webkit-autofill:focus {
       filter: saturate(20%);
       transition: transform 0.6s ease;
       max-height: 660px;
+
       &:hover {
         cursor: pointer;
         // filter: saturate(100%);
@@ -754,45 +755,50 @@ select:-webkit-autofill:focus {
     }
   }
 }
-@media screen and (max-width: 768px){
+
+@media screen and (max-width: 769px) {
   .watch-feature {
     &s {
       padding-block: 80px;
-      
+
       &__wrapper {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
         flex-direction: column-reverse;
       }
-    }  
-    &__image {  
+    }
+
+    &__image {
       padding-bottom: 20px;
+
       img {
-        max-height: 300px;          
+        max-height: 300px;
       }
     }
   }
 }
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 426px) {
   .watch-feature {
     &__items {
       h4 {
         font-size: 18px;
         margin-block: 8px;
       }
-  
+
       p {
         font-size: 14px;
       }
-  
+
       li:not(:last-of-type) {
         margin-bottom: 30px;
       }
     }
-  
-    &__image {  
+
+    &__image {
       padding-bottom: 20px;
+
       img {
-        max-height: 300px;          
+        max-height: 300px;
       }
     }
   }
@@ -847,26 +853,31 @@ select:-webkit-autofill:focus {
     bottom: 0;
   }
 }
-@media screen and (max-width: 425px){
- .watch-collection {
-  &__detail {
-    h3 {
-      font-size: 26px;
+
+@media screen and (max-width: 426px) {
+  .watch-collection {
+    &__detail {
+      h3 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
     }
-    p {
-      font-size: 14px;
-      margin-bottom: 20px;
+
+    &__item {
+      height: 400px;
     }
-  }
-  &__item {
-    height: 400px;   
-  }
-  &__media {
-    bottom: auto;
-    top: 0;
+
+    &__media {
+      bottom: auto;
+      top: 0;
+    }
   }
 }
-}
+
 // Landing Page Style -- Ends
 /**----------------------------------------------**/
 /**----------------------------------------------**/
@@ -877,7 +888,6 @@ select:-webkit-autofill:focus {
 /**----------------------------------------------**/
 // Product Listing Page -- Starts
 .product-list-hero {
-  // margin-top: 104px;
   padding-top: 224px;
 
   &_background {
@@ -909,30 +919,31 @@ select:-webkit-autofill:focus {
     }
   }
 }
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 426px) {
   .product-list-hero {
-  // margin-top: 104px;
-  padding-top: 114px;
+    // margin-top: 104px;
+    padding-top: 114px;
 
-  &__content {
-    padding-top: 20px;
-    padding-bottom: 40px;
+    &__content {
+      padding-top: 20px;
+      padding-bottom: 40px;
 
-    &-title {
-      font-size: 34px;
+      &-title {
+        font-size: 34px;
+      }
+
+      &-subtitle {
+        font-size: 16px;
+      }
     }
 
-    &-subtitle {
-      font-size: 16px;
+    &__media {
+      img {
+        height: 340px;
+      }
     }
   }
-
-  &__media {
-    img {
-      height: 340px;
-    }
-  }
-}
 }
 
 .product-list-anav {
@@ -1062,6 +1073,56 @@ select:-webkit-autofill:focus {
 .product-list {
   background-color: #ffffff;
 
+  .mobile-view {
+    &__filter-btn {
+      display: none;
+    }
+
+    &__filter-drawer {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 769px) {
+    &-anav {
+      /** .filter__accordions {
+         max-height: calc(100dvh - 300px);
+         overflow-y: scroll;
+       }**/
+      &-lg {
+        display: none;
+      }
+    }
+
+    .mobile-view {
+      &__filter-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        position: sticky;
+        top: 90dvh;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        color: #FFFFFF;
+        fill: #FFFFFF;
+      }
+
+      &__filter-drawer {
+        display: block;
+
+        .offcanvas {
+          height: calc(100dvh - 100px) !important;
+        }
+
+        .btn-close:focus {
+          box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%) !important;
+        }
+      }
+    }
+  }
+
   &__search {
     &-wrapper {
       gap: 20px;
@@ -1114,7 +1175,7 @@ select:-webkit-autofill:focus {
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 769px) {
     width: 100%;
     justify-content: space-between;
   }
@@ -1292,10 +1353,6 @@ select:-webkit-autofill:focus {
     }
 
     & .footer-nav {
-      &__group {}
-
-      &__col {}
-
       &__header {
         color: #18181b;
         font-size: 16px;
@@ -1314,21 +1371,22 @@ select:-webkit-autofill:focus {
     }
   }
 }
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 426px) {
   .site-footer {
     padding-bottom: 40px;
     padding-top: 30px;
-  
+
     & .subscription {
-  
+
       &__detail {
         font-size: 28px;
         line-height: 30px;
       }
     }
-  
+
     & .main-footer {
-      padding-top: 30px;  
+      padding-top: 30px;
     }
   }
 }

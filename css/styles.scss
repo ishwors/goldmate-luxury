@@ -28,7 +28,7 @@ html {
 }
 
 main {
-  background: #f7fafc;
+  background: $gray--50;
 }
 
 h1,
@@ -48,10 +48,10 @@ h3 {
 
 a {
   transition: all 0.2s linear;
-  color: #121212;
+  color: $primary-color;
 
   &:hover {
-    color: #121212;
+    color: $primary-color;
     opacity: 0.8;
   }
 }
@@ -59,13 +59,13 @@ a {
 // Bootstrap v5.2.3 Overriding
 .form-check-input {
   &:focus {
-    border-color: #121212;
+    border-color: $primary-color;
     box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
   }
 
   &:checked {
-    background-color: #121212;
-    border-color: #121212;
+    background-color: $primary-color;
+    border-color: $primary-color;
   }
 
   &[type="checkbox"] {
@@ -79,7 +79,7 @@ a {
 }
 
 .btn.btn-warning {
-  background: #fee13d;
+  background: $base-yellow--bg;
 }
 
 // User Agent StyleSheet Override
@@ -93,7 +93,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-text-fill-color: #ffffff;
+  -webkit-text-fill-color: $base-white;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -106,7 +106,7 @@ select:-webkit-autofill:focus {
 /**----------------------------------------------**/
 // Login Page CSS -- Starts
 .login-banner {
-  background-color: #121212;
+  background-color: $primary-color;
   height: 100dvh;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@ select:-webkit-autofill:focus {
   max-width: 480px;
 
   &__wrapper {
-    background: #121212;
+    background: $primary-color;
     height: 100dvh;
     padding: 0 20px;
 
@@ -126,7 +126,7 @@ select:-webkit-autofill:focus {
     span,
     label,
     a {
-      color: white;
+      color: $base-white;
     }
 
     & .logo {
@@ -150,7 +150,7 @@ select:-webkit-autofill:focus {
         font-size: 16px;
         line-height: normal;
         font-weight: 400;
-        color: #dddddddb;
+        color: $text-white--86;
       }
     }
 
@@ -179,11 +179,11 @@ select:-webkit-autofill:focus {
         border-radius: 8px;
         background: rgba(145, 158, 171, 0.08);
         border: none;
-        color: #ffffff;
+        color: $base-white;
 
         &:focus {
           background: rgba(145, 158, 171, 0.08);
-          color: #ffffff;
+          color: $base-white;
           box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
 
           &+label {
@@ -198,18 +198,18 @@ select:-webkit-autofill:focus {
         & .error-message {
           font-size: 14px;
           padding: 0 10px;
-          color: #733a3a;
+          color: $error-shade;
         }
 
         // & .form-control.input-error{
-        //   color: #733a3a;
-        //   box-shadow: 0 0 0 0.25rem #733a3aad;
+        //   color: $error-shade;
+        //   box-shadow: 0 0 0 0.25rem $error-shade--85;
         // }
       }
 
       & .icon {
         padding: 20px 4px;
-        color: #d9d9d9;
+        color: $base-white--85;
         min-width: 34px;
         text-align: center;
         font-size: 16px;
@@ -240,9 +240,9 @@ select:-webkit-autofill:focus {
         }
       }
 
-      & .forget-password__link {
-        // color: #ffffff;
-      }
+      // & .forget-password__link {
+       // color: $base-white;
+      // }
     }
 
     & .login-btn {
@@ -251,9 +251,9 @@ select:-webkit-autofill:focus {
       font-weight: 600;
     }
 
-    & .register-link {
-      &__wrapper {}
-    }
+    // & .register-link {
+    //   &__wrapper {}
+    // }
   }
 }
 
@@ -333,7 +333,7 @@ select:-webkit-autofill:focus {
   top: 0;
   z-index: 999;
   height: 104px;
-  background-color: #121212;
+  background-color: $primary-color;
 
   .site-navigation {
     &__header-link {
@@ -359,7 +359,7 @@ select:-webkit-autofill:focus {
 
   .login-btn {
     .btn {
-      color: #121212;
+      color: $primary-color;
       font-size: 18px;
       font-weight: 700;
       line-height: normal;
@@ -411,7 +411,7 @@ select:-webkit-autofill:focus {
           }
 
           &__header-link {
-            color: #121212;
+            color: $primary-color;
             margin-bottom: 20px;
           }
         }
@@ -437,7 +437,7 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 
   &_background {
-    background: #121212;
+    background: $primary-color;
     background: linear-gradient(90deg, #121212 0%, #262626 50%, #121212 100%);
   }
 
@@ -451,7 +451,7 @@ select:-webkit-autofill:focus {
       font-size: 66px;
       font-weight: 600;
       line-height: normal;
-      color: #ffffff;
+      color: $base-white;
     }
 
     &-subtitle {
@@ -462,13 +462,13 @@ select:-webkit-autofill:focus {
     }
 
     & .shop-now__btn {
-      color: #ffd700;
+      color: $base-yellow;
       font-size: 18px;
       font-weight: 700;
       line-height: normal;
 
       &:active {
-        color: #ffd700da;
+        color: $base-yellow--85;
         border-color: transparent;
       }
 
@@ -477,7 +477,7 @@ select:-webkit-autofill:focus {
       &::before {
         content: "";
         height: 1px;
-        background-color: #ffd700;
+        background-color: $base-yellow--bg;
         width: 32px;
         border-radius: 4px;
         position: absolute;
@@ -488,7 +488,7 @@ select:-webkit-autofill:focus {
       &::after {
         content: "";
         height: 1px;
-        background-color: #ffd700;
+        background-color: $base-yellow--bg;
         width: 32px;
         border-radius: 4px;
         position: absolute;
@@ -505,12 +505,12 @@ select:-webkit-autofill:focus {
         top: calc(50dvh - 120px);
       }
 
-      color: #ffffff;
+      color: $base-white;
       font-size: 18px;
       line-height: normal;
 
       &:active {
-        color: #ffffffda;
+        color: $base-white--80;
         border-color: transparent;
       }
 
@@ -519,7 +519,7 @@ select:-webkit-autofill:focus {
       &::before {
         content: "";
         height: 1px;
-        background-color: #ffffff;
+        background-color: $base-white;
         width: 50px;
         border-radius: 4px;
         position: absolute;
@@ -530,7 +530,7 @@ select:-webkit-autofill:focus {
       &::after {
         content: "";
         height: 1px;
-        background-color: #ffffff;
+        background-color: $base-white;
         width: 50px;
         border-radius: 4px;
         position: absolute;
@@ -595,7 +595,7 @@ select:-webkit-autofill:focus {
   }
 
   p {
-    color: #383840;
+    color: $text-white--86;
     line-height: normal;
     font-weight: 400;
     font-size: 18px;
@@ -633,21 +633,21 @@ select:-webkit-autofill:focus {
 
     h2,
     button {
-      color: #ffffff;
+      color: $base-white;
     }
 
     a.shop-now__btn {
-      color: #fee13d;
+      color: $base-yellow;
       margin-top: 20px;
       transition: all 0.2s linear;
 
       &:hover {
-        color: #fee13dde;
+        color: $base-yellow;
       }
     }
 
     p {
-      color: #dddddddd;
+      color: $text-white--86;
     }
 
     button {
@@ -662,13 +662,13 @@ select:-webkit-autofill:focus {
       }
 
       &:hover {
-        color: #ffffffda;
+        color: $base-white--80;
         border: 0;
       }
     }
   }
 
-  video {}
+  // video {}
 }
 
 @media screen and (max-width: 426px) {
@@ -689,7 +689,7 @@ select:-webkit-autofill:focus {
 .watch-feature {
   &s {
     // height: 100dvh;
-    background-color: #edf2f7;
+    background-color: $gray--100;
     padding-block: 120px;
 
     &:hover {
@@ -815,7 +815,7 @@ select:-webkit-autofill:focus {
     z-index: 1;
 
     h3 {
-      color: #ffffff;
+      color: $base-white;
       font-size: 28px;
       font-weight: 600;
       line-height: normal;
@@ -835,15 +835,15 @@ select:-webkit-autofill:focus {
     height: 500px;
 
     &.dark {
-      background-color: #121212;
+      background-color: $primary-color;
     }
 
     &.light {
-      background-color: #e6e6fa;
+      background-color: $purple--700;
 
       h3,
       p {
-        color: #121212;
+        color: $primary-color;
       }
     }
   }
@@ -891,7 +891,7 @@ select:-webkit-autofill:focus {
   padding-top: 224px;
 
   &_background {
-    background: #121212;
+    background: $primary-color;
   }
 
   &__content {
@@ -901,7 +901,7 @@ select:-webkit-autofill:focus {
       font-size: 46px;
       font-weight: 600;
       line-height: normal;
-      color: #ffffff;
+      color: $base-white;
     }
 
     &-subtitle {
@@ -1010,12 +1010,12 @@ select:-webkit-autofill:focus {
 
     &::-webkit-scrollbar-thumb {
       border-radius: 100px;
-      background: #e0e0e0;
+      background: $gray--400;
       transition: all 0.5s ease-out;
     }
 
     &::-webkit-scrollbar-thumb:hover {
-      background: #121212aa;
+      background: $primary-color--85;
     }
 
     &.accordion {
@@ -1071,7 +1071,7 @@ select:-webkit-autofill:focus {
 }
 
 .product-list {
-  background-color: #ffffff;
+  background-color: $base-white;
 
   .mobile-view {
     &__filter-btn {
@@ -1105,7 +1105,7 @@ select:-webkit-autofill:focus {
         left: 50%;
         transform: translateX(-50%);
         z-index: 5;
-        color: #FFFFFF;
+        color: $base-white;
         fill: #FFFFFF;
       }
 
@@ -1165,7 +1165,7 @@ select:-webkit-autofill:focus {
       border: 1px solid #e5e5e5;
 
       &:focus {
-        border-color: #121212;
+        border-color: $primary-color;
         box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
       }
     }
@@ -1185,7 +1185,7 @@ select:-webkit-autofill:focus {
   .product-item {
     position: relative;
     // padding: 10px 20px;
-    background: #f9f9f9;
+    background: $gray--75;
     min-height: 300px;
     // max-height: 464px;
 
@@ -1233,7 +1233,7 @@ select:-webkit-autofill:focus {
       top: 20px;
       left: 16px;
       font-size: 12px;
-      color: #121212;
+      color: $primary-color;
     }
 
     &__btn {
@@ -1261,11 +1261,11 @@ select:-webkit-autofill:focus {
         & .page-item {
           .page-link {
             font-weight: 700;
-            color: #121212;
+            color: $primary-color;
             border: none;
 
             &:focus {
-              border-color: #121212;
+              border-color: $primary-color;
               box-shadow: 0 0 0 0.25rem rgb(99 100 100 / 25%);
             }
           }
@@ -1282,8 +1282,8 @@ select:-webkit-autofill:focus {
 
           &.active>.page-link,
           &.active>.page-link.active {
-            color: #ffffff;
-            background-color: #121212;
+            color: $base-white;
+            background-color: $primary-color;
           }
         }
       }
@@ -1301,7 +1301,7 @@ select:-webkit-autofill:focus {
 /**----------------------------------------------**/
 // Site Footer Style -- Starts
 .site-footer {
-  background: #f7fafc;
+  background: $gray--50;
   padding-bottom: 60px;
   padding-top: 40px;
 
@@ -1313,7 +1313,7 @@ select:-webkit-autofill:focus {
       &::after {
         content: "";
         height: 1px;
-        background-color: #e4e4e7;
+        background-color: $gray--200;
         position: absolute;
         right: 0;
         bottom: 0;
@@ -1323,7 +1323,7 @@ select:-webkit-autofill:focus {
 
     &__detail {
       max-width: 560px;
-      color: #18181b;
+      color: $gray--900;
       font-size: 32px;
       line-height: 42px;
       font-weight: 700;
@@ -1337,7 +1337,7 @@ select:-webkit-autofill:focus {
       max-width: 400px;
 
       &__title {
-        color: #18181b;
+        color: $gray--900;
         font-size: 16px;
         font-weight: 700;
         line-height: 24px;
@@ -1345,7 +1345,7 @@ select:-webkit-autofill:focus {
       }
 
       &__desc {
-        color: #2d3748;
+        color: $gray--700;
         font-size: 14px;
         font-weight: 400;
         line-height: 22px;
@@ -1354,7 +1354,7 @@ select:-webkit-autofill:focus {
 
     & .footer-nav {
       &__header {
-        color: #18181b;
+        color: $gray--900;
         font-size: 16px;
         font-weight: 600;
         line-height: 24px;
@@ -1362,7 +1362,7 @@ select:-webkit-autofill:focus {
       }
 
       &__item {
-        color: #18181b;
+        color: $gray--900;
         font-size: 14px;
         font-weight: 400;
         line-height: 40px;

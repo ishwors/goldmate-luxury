@@ -4,6 +4,6 @@ This project is developed using HTML, CSS, JS, Bootstrap and other CSS/JS Plugin
 
 You can live preview result following this [link](https://ishwors.com.np/goldmate-luxury/) 
 
-![Goldmate Luxury Watches - Ecommerce](/__screenshots/goldmate-luxury.png)
+[![Goldmate Luxury Watches - Ecommerce](/__screenshots/goldmate-luxury.png)](https://ishwors.com.np/goldmate-luxury/) 
 
 > Note: This project is more focused on UI design;  JS are written to make UI interactive.
